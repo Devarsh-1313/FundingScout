@@ -1,0 +1,129 @@
+{
+  "identity": {
+    "name": "E1",
+    "archetype": "The Performance Pro (Elite Financial)",
+    "mission": "Create a Bloomberg-grade, data-dense investor terminal. Tactical, high-contrast, zero-fluff.",
+    "emotional_tone": "Serious, Trustworthy, Precision, High-Velocity"
+  },
+  "typography": {
+    "font_family_heading": "Barlow Condensed",
+    "font_family_body": "Manrope",
+    "font_family_code": "JetBrains Mono",
+    "scale": {
+      "h1": "text-5xl font-black tracking-tight uppercase",
+      "h2": "text-3xl font-bold tracking-tight",
+      "h3": "text-xl font-bold tracking-normal",
+      "body": "text-sm font-medium leading-relaxed",
+      "caption": "text-xs font-mono tracking-wide text-muted-foreground uppercase"
+    },
+    "imports": [
+      "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    ]
+  },
+  "colors": {
+    "palette_name": "Deep Obsidian Tactical",
+    "mode": "dark",
+    "backgrounds": {
+      "app_bg": "#050505",
+      "card_bg": "#0A0A0A",
+      "panel_bg": "#111111",
+      "sidebar_bg": "#000000"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#52525B",
+      "accent": "#3B82F6"
+    },
+    "accents": {
+      "primary": "#3B82F6",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "border": "#27272A"
+    },
+    "utility_classes": {
+      "bg_app": "bg-[#050505]",
+      "bg_card": "bg-[#0A0A0A]",
+      "text_main": "text-white",
+      "text_dim": "text-zinc-400",
+      "border_subtle": "border-zinc-800"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid - Mode B (High Density)",
+    "container_padding": "p-6 md:p-8",
+    "spacing_scale": "Relaxed but precise (gap-4 for data, gap-8 for sections)",
+    "max_width": "max-w-[1920px] mx-auto",
+    "rules": [
+      "Use 'Grid Borders' style: Visible 1px borders between data cells.",
+      "Dashboard widgets must span full height to avoid jagged bottoms.",
+      "Sidebar navigation should be fixed on the left (w-64) for desktop.",
+      "Use 'View' toggles (List vs Grid) for Investor Database."
+    ]
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-sm uppercase tracking-wider text-xs px-6 py-2.5 transition-all shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]",
+      "secondary": "bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 text-zinc-300 font-medium rounded-sm text-xs px-4 py-2.5",
+      "ghost": "text-zinc-400 hover:text-white hover:bg-zinc-900 rounded-sm"
+    },
+    "cards": {
+      "style": "Flat, Sharp Edges, Grid Borders",
+      "base_class": "bg-[#0A0A0A] border border-zinc-800 rounded-none relative overflow-hidden group",
+      "hover_effect": "hover:border-zinc-600 transition-colors duration-200"
+    },
+    "inputs": {
+      "style": "Technical, Monospace Font",
+      "base_class": "bg-black border border-zinc-800 focus:border-blue-600 rounded-none text-sm font-mono placeholder:text-zinc-700 h-10"
+    },
+    "tables": {
+      "style": "Terminal Data Density",
+      "header_class": "bg-zinc-950 text-zinc-500 font-mono text-xs uppercase tracking-wider border-b border-zinc-800 h-10",
+      "row_class": "border-b border-zinc-900/50 hover:bg-blue-900/10 transition-colors font-mono text-sm h-12",
+      "cell_class": "px-4 py-2 text-zinc-300"
+    }
+  },
+  "visual_enhancers": {
+    "borders": "1px solid #27272A (zinc-800)",
+    "shadows": "None by default. Use 'Glow' for active states.",
+    "glassmorphism": "Only for sticky top/bottom bars: bg-black/80 backdrop-blur-md border-b border-white/5",
+    "textures": "Subtle noise overlay on the main background (optional)",
+    "animations": {
+      "hover": "transition-all duration-200 ease-out",
+      "page_load": "animate-in fade-in slide-in-from-bottom-4 duration-500"
+    }
+  },
+  "icons": {
+    "library": "@phosphor-icons/react",
+    "style": "Duotone",
+    "usage_guide": "Use Duotone weight. Primary color: White, Secondary color: Blue-500 (opacity 20%)."
+  },
+  "media": {
+    "image_urls": {
+      "hero_background": "https://images.unsplash.com/photo-1762279388956-1c098163a2a8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGRpZ2l0YWwlMjBuZXR3b3JrJTIwZGF0YSUyMHZpc3VhbGl6YXRpb24lMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzI4NzgxNzd8MA&ixlib=rb-4.1.0&q=85",
+      "idea_match_bg": "https://images.unsplash.com/photo-1762278804798-dd7e493db051?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRpZ2l0YWwlMjBuZXR3b3JrJTIwZGF0YSUyMHZpc3VhbGl6YXRpb24lMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzI4NzgxNzd8MA&ixlib=rb-4.1.0&q=85",
+      "events_bg": "https://images.unsplash.com/photo-1610374792793-f016b77ca51a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBvZmZpY2UlMjBza3lzY3JhcGVyJTIwYnVzaW5lc3MlMjBtZWV0aW5nfGVufDB8fHx8MTc3Mjg3ODE3Nnww&ixlib=rb-4.1.0&q=85",
+      "govt_bg": "https://images.unsplash.com/photo-1765729003706-355ca161736d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBza3lzY3JhcGVyJTIwYnVzaW5lc3MlMjBtZWV0aW5nfGVufDB8fHx8MTc3Mjg3ODE3Nnww&ixlib=rb-4.1.0&q=85"
+    },
+    "usage_rules": "Images should be used with a heavy dark overlay (bg-black/70) to ensure text legibility. They are strictly for background texture, not focal points."
+  },
+  "instructions_to_main_agent": [
+    "ENFORCE DARK MODE: Add 'dark' class to the <html> or <body> tag immediately.",
+    "USE SHADCN CAREFULLY: Do not use default white cards. Override with bg-[#0A0A0A] and border-zinc-800.",
+    "DATA VISUALIZATION: Use Recharts. Style charts with the 'Deep Obsidian' palette (Blue, Emerald, Purple on dark bg).",
+    "LAYOUT: Implement a persistent Sidebar for navigation (Dashboard, Investors, News, Events, etc.).",
+    "TABLES: The Investor Database table is the core feature. It must support sorting, filtering, and pagination. Use a sticky header.",
+    "IDEA MATCH: Use the 'idea_match_bg' image with a glassmorphism overlay for the AI matching input section.",
+    "NEWS AGGREGATOR: Design as a 'Ticker' or dense feed list, not large blog cards.",
+    "NO AUTH: Do not build login pages. Direct user to Dashboard immediately."
+  ],
+  "universal_guidelines": [
+    "DO NOT use gradients for backgrounds. Use solid dark grays/blacks.",
+    "DO NOT use rounded-xl or rounded-2xl. Use rounded-sm or rounded-none for a sharp, technical feel.",
+    "ALL interactive elements must have data-testid attributes.",
+    "Use 'sonner' for toast notifications.",
+    "Install @phosphor-icons/react for icons.",
+    "Never use generic 'Inter' for headings. Use Barlow Condensed."
+  ]
+}
