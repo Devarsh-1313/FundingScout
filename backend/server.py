@@ -804,15 +804,21 @@ app.add_middleware(
 )
 
 # ─── Serve React Frontend ───
-FRONTEND_BUILD_PATH = Path(__file__).parent.parent / "frontend" / "build"
+FRONTEND_BUILD_PATH = os.path.join(os.getcwd(), "frontend", "build")
 
-if FRONTEND_BUILD_PATH.exists():
-    app.mount("/static", StaticFiles(directory=FRONTEND_BUILD_PATH / "static"), name="static")
+# Serve static files (JS, CSS)
+app.mount(
+    "/static",
+    StaticFiles(directory=os.path.join(FRONTEND_BUILD_PATH, "static")),
+    name="static"
+)
 
-    @app.get("/")
-    async def serve_react():
-        return FileResponse(FRONTEND_BUILD_PATH / "index.html")
+# Serve React app
+@app.get("/")
+async def serve():
+    return FileResponse(os.path.join(FRONTEND_BUILD_PATH, "index.html"))
 
-    @app.get("/{full_path:path}")
-    async def serve_react_routes(full_path: str):
-        return FileResponse(FRONTEND_BUILD_PATH / "index.html")
+# Catch all routes (VERY IMPORTANT)
+@app.get("/{full_path:path}")
+async def serve_react(full_path: str):
+    return FileResponse(os.path.join(FRONTEND_BUILD_PATH, "index.html"))
