@@ -1,5 +1,7 @@
 from fastapi import FastAPI, APIRouter, Query, HTTPException, UploadFile, File
-from fastapi.responses import StreamingResponse, Response
+# from fastapi.responses import StreamingResponse, Response
+from fastapi.responses import StreamingResponse, Response, FileResponse
+from fastapi.staticfiles import StaticFiles
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -800,3 +802,17 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# ─── Serve React Frontend ───
+FRONTEND_BUILD_PATH = Path(__file__).parent.parent / "frontend" / "build"
+
+if FRONTEND_BUILD_PATH.exists():
+    app.mount("/static", StaticFiles(directory=FRONTEND_BUILD_PATH / "static"), name="static")
+
+    @app.get("/")
+    async def serve_react():
+        return FileResponse(FRONTEND_BUILD_PATH / "index.html")
+
+    @app.get("/{full_path:path}")
+    async def serve_react_routes(full_path: str):
+        return FileResponse(FRONTEND_BUILD_PATH / "index.html")
