@@ -11,7 +11,11 @@ export default function Accelerators() {
 
   useEffect(() => {
     axios.get(`${API}/accelerators`)
-      .then(r => { setAccelerators(r.data.accelerators); setLoading(false); })
+    .then(r => { 
+      console.log("API:", r.data); // DEBUG
+      setAccelerators(Array.isArray(r.data) ? r.data : r.data.accelerators || []);
+      setLoading(false); 
+    })
       .catch(() => setLoading(false));
   }, []);
 

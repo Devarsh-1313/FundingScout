@@ -13,7 +13,22 @@ export default function Dashboard() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`${API}/stats`).then(r => { setStats(r.data); setLoading(false); }).catch(() => setLoading(false));
+    axios.get(`${API}/stats`)
+  .then(r => {
+    console.log("STATS API:", r.data); // DEBUG
+
+    const data =
+      Array.isArray(r.data) ? r.data[0] :
+      r.data.stats ? r.data.stats :
+      r.data;
+
+    setStats(data || {});
+    setLoading(false);
+  })
+  .catch((err) => {
+    console.error("Stats error:", err);
+    setLoading(false);
+  });
   }, []);
 
   if (loading) return (
