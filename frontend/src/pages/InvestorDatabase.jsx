@@ -8,7 +8,7 @@ import { Search, Download, ChevronLeft, ChevronRight, Filter, X } from "lucide-r
 import { toast } from "sonner";
 import axios from "axios";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 const INVESTOR_TYPES = ["All", "VC", "Angel", "Family Office", "Accelerator", "CVC"];
 const STAGES = ["All", "Pre-seed", "Seed", "Pre-Series A", "Series A", "Series B", "Series C", "Growth", "Late Stage"];
 const PRIORITIES = ["All", "High", "Medium", "Low"];

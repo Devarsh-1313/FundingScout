@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Rocket, ExternalLink, Shield } from "lucide-react";
 import axios from "axios";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 
 export default function Accelerators() {
   const [accelerators, setAccelerators] = useState([]);

@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Landmark, ExternalLink, Filter } from "lucide-react";
 import axios from "axios";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 const CATEGORY_FILTERS = ["All", "Grant", "Equity-free funding", "Tax Exemptions"];
 
 export default function GovtSchemes() {

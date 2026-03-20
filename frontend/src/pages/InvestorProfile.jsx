@@ -11,7 +11,7 @@ import { ArrowLeft, Globe, Linkedin, Twitter, ExternalLink, Save, Pencil } from 
 import { toast } from "sonner";
 import axios from "axios";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 const COLORS = ["#3B82F6", "#10B981", "#F59E0B", "#EF4444", "#8B5CF6", "#EC4899", "#06B6D4"];
 
 export default function InvestorProfile() {

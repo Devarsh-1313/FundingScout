@@ -8,7 +8,7 @@ import { Users, Upload, Globe, ExternalLink, Plus } from "lucide-react";
 import { toast } from "sonner";
 import axios from "axios";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 const STAGES = ["Pre-seed", "Seed", "Pre-Series A", "Series A", "Series B"];
 const SECTORS = ["SaaS", "Fintech", "Consumer", "EdTech", "HealthTech", "AI/ML", "E-commerce", "DeepTech", "D2C Brands", "CleanTech", "Logistics", "FoodTech"];
 

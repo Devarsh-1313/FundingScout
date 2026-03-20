@@ -6,7 +6,7 @@ import { Clock, Download } from "lucide-react";
 import { toast } from "sonner";
 import axios from "axios";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 
 export default function NewUpdated() {
   const navigate = useNavigate();

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, ExternalLink, Clock } from "lucide-react";
 import axios from "axios";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 const CATEGORIES = ["All", "Conference", "Demo Day", "Hackathon", "Accelerator"];
 
 export default function EventsTracker() {

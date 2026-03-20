@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Newspaper } from "lucide-react";
 import axios from "axios";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 const CATEGORIES = ["All", "Funding", "Product Launch", "M&A", "Partnership", "Analysis", "Accelerator", "Industry"];
 
 export default function NewsAggregator() {
